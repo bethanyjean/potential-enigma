@@ -29,7 +29,7 @@ module.exports = data => {
   #Contributing
   ${data.contribution}
   #Test
-  ${data.test-instructions}
+  ${data.testInstructions}
   #License
   #Questions
 `;

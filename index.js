@@ -9,7 +9,7 @@ const questions = () => {
     return inquirer.prompt([
             {
                 type: 'input',
-                name: 'project-title',
+                name: 'title',
                 message: 'What is the title of your project? (Required)',
                 validate: titleInput => {
                     if (titleInput) {
@@ -22,7 +22,7 @@ const questions = () => {
             },
             {
                 type: 'input',
-                name: 'project-description',
+                name: 'description',
                 message: 'Please write a description of your project. (Required)',
                 validate: descriptionInput => {
                     if (descriptionInput) {
@@ -80,7 +80,7 @@ const questions = () => {
             },
             {
                 type: 'input',
-                name: 'test-instructions',
+                name: 'testInstructions',
                 message: 'Please include any test instructions.',
                 when: ({ confirmTest }) => confirmTest
             },
