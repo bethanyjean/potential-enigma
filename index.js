@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const { BADSTR } = require('dns');
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -85,10 +86,11 @@ const questions = () => {
                 when: ({ confirmTest }) => confirmTest
             },
             {
-                type: 'checkbox',
-                name: 'licenses',
-                message: 'What licenses apply to this project? (Check all that apply)',
-                choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC']
+                type: 'list',
+                name: 'license',
+                message: 'What license apply to this project?',
+                choices: ['None', 'Apache 2.0', 'Boost', 'BSD', 'Eclipse', 'IBM', 'MIT', 'Mozilla'],
+                default: 0,
             },
             {
                 type: 'input',
